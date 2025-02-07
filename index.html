@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be Mine?</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 50px;
+      justify-content: center;
+        align-items: center;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff5e57;
+      color: white;
+    }
+    button:hover {
+      background-color: #ff3e30;
+    }
+    #message {
+      display: none;
+      margin-top: 20px;
+    }
+    #image-section {
+      display: none;
+      margin-top: 20px;
+    }
+    #image-section img {
+      width: 250px;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/durefishan.jpg" 
+            style="
+            width: 200px; /* Adjust the size */
+            height: 200px; /* Make it equal to width for a perfect circle */
+            border-radius: 50%; /* Make it round */
+            object-fit: cover; /* Ensures the image scales without distortion */
+            border: 2px solid #ff5e57; Optional: Add a border
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+            " 
+        alt="my love">
+    </div>
+  <h1>Hey Crush!</h1>
+  <p>Will you be the one to complete my code?</p>
+  <button onclick="showMessage()">Yes</button>
+  <button onclick="showMessage()">Absolutely!</button>
+
+  <div id="message">
+    <h2>Thank you for being you ❤️</h2>
+    <p>I can't wait to know more about you and create something beautiful together.</p>
+  </div>
+
+  <div id="image-section">
+    <h3>Here's something special just for you:</h3>
+    <img src="./assets/flowers.jpg" alt="Special for you">
+  </div>
+
+  <script>
+    function showMessage() {
+      // Show the hidden message
+      document.getElementById('message').style.display = 'block';
+
+      // Show the image section
+      document.getElementById('image-section').style.display = 'block';
+
+      // Trigger confetti effect
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+  <footer> Made with love by Misbah ❤️</footer>
+</body>
+</html>
