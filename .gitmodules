@@ -1,0 +1,3 @@
+[submodule "proposal-website"]
+    path = proposal-website
+    url = https://github.com/uxmisbah/proposal-website.git
